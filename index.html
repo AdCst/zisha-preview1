@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>紫砂壶定制预览</title>
+
+  <!-- 样式 -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- importmap -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+      "three/examples/jsm/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="sidebar">
+      <button data-model="models/model1.glb">模型 1</button>
+      <button data-model="models/model2.glb">模型 2</button>
+      <button data-model="models/model3.glb">模型 3</button>
+      <hr />
+<button id="patternA">图案 A</button>
+<button id="patternB">图案 B</button>
+<button id="patternC">图案 C</button>
+<button id="patternC">图案 D</button>
+
+    </div>
+
+    <div id="viewer"></div>
+  </div>
+
+  <!-- 主逻辑 -->
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

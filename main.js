@@ -138,7 +138,7 @@ function updateDecal() {
     const decalMaterial = new THREE.MeshStandardMaterial({
       map: paintTexture,  // 彩绘颜色（可为null）
       normalMap: normalTexture,  // 法线纹理（可为null）
-      normalScale: new THREE.Vector2(3.0, 3.0),
+      normalScale: new THREE.Vector2(1.0, 1.0),
       transparent: true,
       opacity: 1,
       side: THREE.FrontSide,

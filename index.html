@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>紫砂壶定制预览</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.159.0/build/three.module.js",
+      "three/examples/jsm/": "https://unpkg.com/three@0.159.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="sidebar">
+      <div class="model-btns">
+        <button data-model="models/model1.glb">模型 1</button>
+        <button data-model="models/model2.glb">模型 2</button>
+        <button data-model="models/model3.glb">模型 3</button>
+      </div>
+      <hr />
+      <!-- 颜色选择区域 -->
+      <div class="color-area">
+        <p>选择壶身材质：</p>
+        <p>紫泥系列</p>
+        <button class="color-btn" data-color="#6D5B54">底槽清</button>
+        <button class="color-btn" data-color="#7A6963">原矿紫泥</button>
+        <button class="color-btn" data-color="#5C6570">天青泥</button>
+
+        <p>朱泥系列</p>
+        <button class="color-btn" data-color="#B85B46">小煤窑朱泥</button>
+        <button class="color-btn" data-color="#C86B55">大红袍朱泥</button>
+        <button class="color-btn" data-color="#A95C50">红皮龙</button>
+
+        <p>段泥系列</p>
+        <button class="color-btn" data-color="#C9B88F">黄金段泥</button>
+        <button class="color-btn" data-color="#A8A08D">青段泥</button>
+        <button class="color-btn" data-color="#B4A990">芝麻段泥</button>
+
+        <p>绿泥系列</p>
+        <button class="color-btn" data-color="#8A9A86">本山绿泥</button>
+        <button class="color-btn" data-color="#6B7B6E">墨绿泥</button>
+      </div>
+      <hr />
+      <!-- 图案选择区（法线纹理） -->
+      <div class="pattern-area">
+        <div class="pattern-item">
+          <button class="pattern-btn" data-pattern="patterns/A.png">纹理 梅</button>
+          <img src="patterns/A.png" alt="纹理A" class="pattern-preview" />
+        </div>
+        <div class="pattern-item">
+          <button class="pattern-btn" data-pattern="patterns/B.png">纹理 兰</button>
+          <img src="patterns/B.png" alt="纹理B" class="pattern-preview" />
+        </div>
+        <div class="pattern-item">
+          <button class="pattern-btn" data-pattern="patterns/C.png">纹理 竹</button>
+          <img src="patterns/C.png" alt="纹理C" class="pattern-preview" />
+        </div>
+        <div class="pattern-item">
+          <button class="pattern-btn" data-pattern="patterns/D.png">纹理 菊</button>
+          <img src="patterns/D.png" alt="纹理D" class="pattern-preview" />
+        </div>
+      </div>
+      <hr />
+      <!-- 新增：彩绘选择区 -->
+      <div class="paint-area">
+        <p>选择彩绘图案：</p>
+        <div class="paint-item">
+          <button class="paint-btn" data-paint="patterns/color/paint1.png">彩绘 梅</button>
+          <img src="patterns/color/paint1.png" alt="彩绘1" class="paint-preview" />
+        </div>
+        <div class="paint-item">
+          <button class="paint-btn" data-paint="patterns/color/paint2.png">彩绘 兰</button>
+          <img src="patterns/color/paint2.png" alt="彩绘2" class="paint-preview" />
+        </div>
+        <div class="paint-item">
+          <button class="paint-btn" data-paint="patterns/color/paint3.png">彩绘 竹</button>
+          <img src="patterns/color/paint3.png" alt="彩绘3" class="paint-preview" />
+        </div>
+        <div class="paint-item">
+          <button class="paint-btn" data-paint="patterns/color/paint4.png">彩绘 菊</button>
+          <img src="patterns/color/paint4.png" alt="彩绘4" class="paint-preview" />
+        </div>
+        <!-- 如果有更多paint.png，可以添加更多item -->
+      </div>
+      <!-- 在容量选择区下面添加 -->
+      <hr />
+      <div class="clear-btn-area">
+        <button id="clear-decal-btn">清除所有贴图</button>
+      </div>
+      <hr />
+      <!-- 容量选择区 -->
+      <div class="capacity-area">
+        <p>紫砂壶容量（cc）：</p>
+        <input type="number" id="capacity-input" min="150" max="500" step="10" value="300" placeholder="150-500" />
+        <div id="capacity-display">当前容量：300 cc</div>
+      </div>
+      <hr />
+    </div>
+    <div id="viewer"></div>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>

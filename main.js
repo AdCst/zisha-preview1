@@ -262,9 +262,9 @@ function validateAndSetCapacity(value) {
     return;
   }
 
-  if (num < 150) {
-    alert('小心！\n超出最小容量喽～\n已自动调整为 150 cc');
-    num = 150;
+  if (num < 100) {
+    alert('小心！\n超出最小容量喽～\n已自动调整为 100 cc');
+    num = 100;
   } else if (num > 500) {
     alert('小心！\n超出最大容量啦～\n已自动调整为 500 cc');
     num = 500;
